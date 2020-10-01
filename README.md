@@ -4,3 +4,11 @@ This program renames first n subtitle files to the title of the first m video fi
 Change the file extensions or path of the folder to work on in the main.cpp file and compile using C++17 compiler.
 # Update 
 Added path and extension input through the console
+
+
+
+
+
+
+![Screenshot](Before.png)
+![Screenshot](After.png)
