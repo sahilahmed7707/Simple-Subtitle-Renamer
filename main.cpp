@@ -12,7 +12,7 @@ int main()
     std::cout << "Enter video file extension last 3 characters only, Example mp4"<<std::endl;
     std::string ext1{};
     std::cin >> ext1;
-    for (const auto& entry : fs::directory_iterator(path))
+    for (const auto& entry : fs::directory_iterator(path))             //Checks all the files in the directory whether they are a video file and adds them to a vector if they are
     {
         std::stringstream stream;
         stream << entry.path();
@@ -26,7 +26,7 @@ int main()
     std::cout << "Enter subtitle file extension last 3 characters only, Example srt" << std::endl;
     std::string ext2{};
     std::cin >> ext2;
-    for (auto &entry : fs::directory_iterator(path))
+    for (auto &entry : fs::directory_iterator(path))                    //Checks all the files in the directory whether they are a subtitle file and renames them to the corresponding video name if they are
     {
         std::stringstream stream;
         stream << entry.path();
