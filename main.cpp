@@ -22,6 +22,17 @@ int main()
         if((st.at(a-4)=='m') && (st.at(a - 3) == e2) && (st.at(a-2) == e3))
         videonames.push_back(st);
     }
+    int x = 0;
+    std::cout << "Enter subtitle file extension last 3 characters only, Example srt" << std::endl;
+    std::string ext2;
+    std::cin >> ext2;
+    for (auto &entry : fs::directory_iterator(path))
+    {
+        std::stringstream stream;
+        stream << entry.path();
+        std::string st = stream.str();
+        int a = st.size();
+        char e1 = ext2.at(0), e2 = ext2.at(1), e3 = ext2.at(2);
     
-
+    }
 }
