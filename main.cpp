@@ -7,7 +7,6 @@ int main()
     std::cout<<"Enter the path to work in is the form of - D:/Directory/Subdirectory/Modify This Folder Contents"<<std::endl;
     std::string path{};
     std::getline(std::cin,path);
-    //std::string path = "D:/Movies And Series/Series/Modern Family/New folder";
     std::vector<std::string> videonames;
     std::vector<fs::directory_entry> subs;
     std::cout << "Enter video file extension last 3 characters only, Example mp4"<<std::endl;
@@ -41,8 +40,16 @@ int main()
             std::string targetname;
             for(int i=1;i<start+1;i++) 
                 targetname.push_back(a.at(i));
-                
+            for (int i = start + 2; i < a.size() - 4; i++)
+            {
+                targetname.push_back(a.at(i));
+            }
+            targetname.append("srt");
+            fs::path sttr(targetname);
+            std::cout << targetname << std::endl;
+            fs::rename(entry.path(), targetname);
+            std::cout << entry.path() << std::endl;
+            x++;    
         }
-        
     }
 }
