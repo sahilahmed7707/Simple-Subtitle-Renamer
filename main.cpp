@@ -34,7 +34,15 @@ int main()
         std::string st = stream.str();
         int a = st.size();
         char e1 = ext2.at(0), e2 = ext2.at(1), e3 = ext2.at(2);
-        
+        if ((st.at(a - 4) == e1) && (st.at(a - 3) == e2) && (st.at(a - 2) == e3)&&(x<=videonames.size()))
+        {
+            std::string a = videonames.at(x);
+            int start = a.find("\\");
+            std::string targetname;
+            for(int i=1;i<start+1;i++) 
+                targetname.push_back(a.at(i));
+                
+        }
         
     }
 }
