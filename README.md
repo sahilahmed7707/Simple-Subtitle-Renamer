@@ -10,5 +10,5 @@ Added path and extension input through the console
 
 
 
-![Screenshot](Before.png)
-![Screenshot](After.png)
+![Screenshot](Before.jpg)
+![Screenshot](After.jpg)
